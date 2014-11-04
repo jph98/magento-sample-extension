@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<config>
+
+    <tabs>
+        <orderexportconfig translate="label" module="orderexport">
+            <label>Froyo Integration Config</label>
+            <sort_order>99999</sort_order>
+        </orderexportconfig>
+    </tabs>
+ 
+    <sections>
+
+        <orderexport_options translate="label" module="orderexport">
+            <label>Sync Config</label>
+            <tab>orderexportconfig</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>                    
+
+	     <groups>
+
+		<froyo_group translate="label" module="orderexport">
+                    <label>Froyo Extension Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+		    <expanded>true</expanded>
+ 
+                    <fields>
+                        <froyo_input translate="label">
+                            <label>Froyo System URL:</label>
+                            <comment>URL for integrating with the Froyo retail management system</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </froyo_input>
+                    </fields>
+                </froyo_group>
+
+            </groups>
+
+        </orderexport_options>
+    </sections>     
+
+</config>

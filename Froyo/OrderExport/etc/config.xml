@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Froyo_OrderExport>
+            <version>0.1.0</version>
+        </Froyo_OrderExport>
+    </modules>
+    <global>
+        <helpers>
+            <orderexport>
+                <class>Froyo_OrderExport_Helper</class>
+            </orderexport>
+        </helpers>
+        <models>
+            <froyo_orderexport>
+                <class>Froyo_OrderExport_Model</class>
+            </froyo_orderexport>
+        </models>
+        <resources>
+            <froyo_orderexport_setup>
+                <setup>
+                    <module>Froyo_OrderExport</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </froyo_orderexport_setup>
+        </resources>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <froyo_orderexport>
+                        <class>froyo_orderexport/observer</class>
+                        <method>exportOrder</method>
+                    </froyo_orderexport>
+                </observers>
+            </sales_order_place_after>
+        </events>
+    </global>
+
+<adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <orderexport_options>
+                                            <title>Store Order Export Module Section</title>
+                                        </orderexport_options>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+</config>
