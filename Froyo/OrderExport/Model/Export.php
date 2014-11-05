@@ -64,7 +64,7 @@ class Froyo_OrderExport_Model_Export
  
 	// Read page rendered as result of your POST request
 	$result =  file_get_contents (
-                  'http://requestb.in/xnaknexn',  // page url
+                  $endpoint,  // page url
                   false,
                   $context);
         
